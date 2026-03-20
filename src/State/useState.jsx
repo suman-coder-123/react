@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
+import { use ,  useState } from 'react';
 
 // states => data that can change over time inside a component 
 
@@ -12,16 +12,14 @@ import { useState } from 'react'
 // useState() => react hook 
 // startvalue => starting   value 
 
-
-function  counter()  {
-    const [count , setCount] = useState(0);
+const UseState = () => {
+  const [ count , setCount] = useState(0);
   return (
-    <>
-    <h1>hello</h1>
+    <div>
       <h1>{count}</h1>
       <button onClick={() => setCount(count + 1)}>increase</button>
-    </>
+    </div>
   )
 }
 
-export default useState
+export default UseState
