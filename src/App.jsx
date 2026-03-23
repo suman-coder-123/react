@@ -7,8 +7,6 @@ import UseState from './State/useState'
 const App = () => {
   return (
     <>
-   
-
       <Routes >
         <Route path='/' element={<MainLayout />} >
         <Route index element={<Home />} />

@@ -14,13 +14,41 @@ import { use ,  useState } from 'react';
 
 const UseState = () => {
   const [ count , setCount] = useState(0);
-  return (
-    <div>
-      <h1>{count}</h1>
-      <button onClick={() => setCount(count + 1)}>increase</button>
-            <button onClick={() => setCount(count - 1)}>Decrease</button>
+  const [name , setName] = useState("");
 
-    </div>
+
+  function handleClick() {
+    alert("button clicked ");
+  }
+
+  function myName(name) {
+    alert(name);
+  }
+
+  return (
+    <>
+            <button onClick={() => myName("welcome to my website ")}>welcome</button>
+
+
+      <button onClick={() => setCount(count + 1)}>+</button>
+       <h1 >{count}</h1>
+       <button onClick={() => setCount(count - 1)}>-</button>
+
+
+       <input className='bg-gray-200' type="text" value={name} onChange={(e) => setName(e.target.value)}/>
+
+       <h1>{name}</h1>
+
+
+       <button onClick={handleClick}> click me </button>
+
+
+       <button onClick={() => myName("thank you ")}> thank you </button>
+
+    </>
+
+
+
   )
 }
 
