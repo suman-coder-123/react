@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 // lists and keys 
 // list =>  display multiple items from data 
@@ -10,12 +10,26 @@ import React from 'react'
 const List = () => {
     // const fruits = ["apple"  , "mango" , "grapes" ];
 
-    const product = [
-        {id: 1 , name: "shoes" , price: 1000},
-         {id: 2, name: "watch" , price: 2000},
-    ]
+    // const product = [
+    //     {id: 1 , name: "shoes" , price: 1000},
+    //      {id: 2, name: "watch" , price: 2000},
+    // ]
 
-    const filtered = product.filter((item) => item.price>1500);
+    // const filtered = product.filter((item) => item.price>1500);
+
+    const [products , setProducts] = useState([
+         {id: 1 , name: "shoes" , price: 1000},
+          {id: 2, name: "watch" , price: 2000},
+           {id: 3 , name: "shirt" , price: 1400},
+         {id: 4, name: "jeans" , price: 2200},
+    ])
+    
+    function addProduct()  {
+        const newItem = {id : 5 , name :"laptop" , price: 50000};
+    
+
+    setProducts ([...products , newItem]);
+    }
   return (
     
       <div>
@@ -45,6 +59,29 @@ const List = () => {
        ))} */}
 
 
+
+
+      {/* spread operator = ...  */}
+{/*       
+      <div >
+        <h1>Product List</h1>
+        <button onClick={addProduct}>
+            Add Product
+        </button>
+
+        <div>
+            {products.map((item) => (
+              <h2 key={item.id}> {item.name} = {item.price}</h2>
+            ))}
+        </div>
+      </div> */}
+
+
+      
+      
+
+
+     
        
 
 
