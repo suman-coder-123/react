@@ -28,7 +28,8 @@ const FormHandling = () => {
     })
 
    function handleChange(e) {
-    const {value , type } = e.target
+    const {value , type } = e.target;
+    setFormData({ ...formData , [name]:value});
    }
     
     function handleSubmit(e) {
@@ -52,7 +53,7 @@ const FormHandling = () => {
       onChange={handleChange} />
 
 
-      
+
 
       <button type="submit"> Submit</button>
 
