@@ -7,6 +7,8 @@ import UseState from './State/useState'
 import List from './List/List'
 import AddCard from './List/AddCard'
 import FormHandling from './Form/FormHandling'
+import ReactHook from './Form/ReactHook'
+import UseEffects from './State/UseEffects'
 const App = () => {
   return (
     <>
@@ -20,6 +22,8 @@ const App = () => {
          <Route path='/list' element={<List />}/>
          <Route path='/card' element={<AddCard />} />
          <Route path='/form' element={<FormHandling />}/>
+         <Route path='/hook' element={<ReactHook/>}/>
+         <Route path='/useeffect' element={<UseEffects />} />
       </Routes>
     </>
   )
