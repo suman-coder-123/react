@@ -9,6 +9,7 @@ import AddCard from './List/AddCard'
 import FormHandling from './Form/FormHandling'
 import ReactHook from './Form/ReactHook'
 import UseEffects from './State/UseEffects'
+import LocalStorage from './Form/LocalStorage'
 const App = () => {
   return (
     <>
@@ -24,6 +25,7 @@ const App = () => {
          <Route path='/form' element={<FormHandling />}/>
          <Route path='/hook' element={<ReactHook/>}/>
          <Route path='/useeffect' element={<UseEffects />} />
+         <Route path='local' element={<LocalStorage/>} />
       </Routes>
     </>
   )
