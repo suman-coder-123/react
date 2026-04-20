@@ -14,6 +14,8 @@ import UseContext from './State/UseContext'
 import CartProvider from "./context/CartContext";
 import ProductList from "./components/ProductList";
 import Cart from "./components/Cart";
+import Axios from './API/Axios'
+
 
 const App = () => {
   return (
@@ -40,6 +42,7 @@ const App = () => {
          <Route path='/useeffect' element={<UseEffects />} />
          {/* <Route path='local' element={<LocalStorage/>} /> */}
          <Route path='context' element={<UseContext />} />
+         <Route path='axios' element={<Axios />} />
       </Routes>
     </>
   )
